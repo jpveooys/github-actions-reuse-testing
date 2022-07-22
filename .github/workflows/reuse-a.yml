@@ -18,6 +18,8 @@ jobs:
   example_job_2:
     name: Echo goodbye
     runs-on: ubuntu-latest
+    needs:
+      - example_job_1
     steps:
       - run: |
           echo "Goodbye"

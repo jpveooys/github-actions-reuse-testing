@@ -4,12 +4,12 @@ on:
   push:
 
 jobs:
-  call-workflow:
+  call-workflow-a:
     uses: jpveooys/github-actions-reuse-testing/.github/workflows/reuse-a.yml@main
     with:
       username: Mona
 
-  call-workflow-passing-data:
+  call-workflow-b:
     uses: jpveooys/github-actions-reuse-testing/.github/workflows/reuse-b.yml@main
     with:
       username: Bart
