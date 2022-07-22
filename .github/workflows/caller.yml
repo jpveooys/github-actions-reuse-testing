@@ -1,0 +1,15 @@
+name: Call a reusable workflow
+
+on:
+  push:
+
+jobs:
+  call-workflow:
+    uses: jpveooys/github-actions-reuse-testing/.github/workflows/reuse-a.yml@main
+    with:
+      username: Mona
+
+  call-workflow-passing-data:
+    uses: jpveooys/github-actions-reuse-testing/.github/workflows/reuse-b.yml@main
+    with:
+      username: Bart

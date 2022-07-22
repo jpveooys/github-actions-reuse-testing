@@ -1,0 +1,23 @@
+name: Reusable workflow A
+
+on:
+  workflow_call:
+    inputs:
+      username:
+        required: true
+        type: string
+
+jobs:
+  example_job_1:
+    name: Echo username
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "${{ inputs.username }}"
+
+  example_job_2:
+    name: Echo goodbye
+    runs-on: ubuntu-latest
+    steps:
+      - run: |
+          echo "Goodbye"
